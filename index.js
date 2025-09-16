@@ -1,0 +1,4 @@
+url = ''
+
+fetch(url)
+.then()
