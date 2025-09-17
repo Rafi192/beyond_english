@@ -1,11 +1,10 @@
 module.exports = {
+content: ["./index.html"],
   theme: {
     extend: {
       colors: {
         customBlue: '#1E40AF',
-        customGreen: '#10B981',
-        newColorGreen: '#6432'
-        
+        customViolet: '#422ad5',
       },
     },
   },

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
 
     <!-- Tailing + daisy UI CDN -->
+
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
@@ -14,7 +15,85 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <h1 class=""></h1>
+  <body class="">
+    <div class="navbar bg-base-100 shadow-sm">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            <li class="">
+              <a href="" class=""
+                ><i class="fa-solid fa-circle-question"></i>FAQ</a
+              >
+            </li>
+            <li>
+              <a href="" class=""
+                ><i class="fa-solid fa-book-open"></i>Learn more</a
+              >
+            </li>
+            <li>
+              <a href="" class=""
+                ><i class="fa-solid fa-right-from-bracket"></i>Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-xl">
+          <div class="flex items-center">
+            <h2 class="text-lg font-bold">English</h2>
+            <img
+              src="assets/logo.png"
+              alt=""
+              height="40px"
+              width="40px"
+              class="-rotate-10"
+            />
+            <p class="font-bagla font-semibold">জানালা</p>
+          </div>
+        </a>
+      </div>
+      <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 space-x-3">
+          <li class="">
+            <a href="" class="btn btn-outline btn-primary"
+              ><i class="fa-solid fa-circle-question"></i>FAQ</a
+            >
+          </li>
+          <li>
+            <a href="" class="btn btn-outline btn-primary"
+              ><i class="fa-solid fa-book-open"></i>Learn more</a
+            >
+          </li>
+          <li>
+            <a href="" class="btn btn-outline btn-primary"
+              ><i class="fa-solid fa-right-from-bracket"></i>Logout</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/5dd2f1e910.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

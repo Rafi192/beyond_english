@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn english words</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Tailing + daisy UI CDN -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="">
+    <header class="">
+      <nav class="navbar bg-navbar flex justify-between py-6 px-16">
+        <div class="flex items-center">
+          <h2>English</h2>
+          <img
+            src="assets/logo.png"
+            alt=""
+            height="40px"
+            width="40px"
+            class="-rotate-10"
+          />
+          <p class="">জানালা</p>
+        </div>
+
+        <!-- Right side -->
+        <div class="hidden md:flex gap-2">
+          <button class="btn btn-outline btn-primary">
+            <i class="fa-solid fa-circle-question"></i> FAQ
+          </button>
+          <button class="btn btn-outline btn-primary">
+            <i class="fa-solid fa-book-open"></i> Learn
+          </button>
+          <button class="btn btn-outline btn-primary">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+          </button>
+        </div>
+
+        <!-- Mobile dropdown (visible only on small screens) -->
+        <div class="dropdown dropdown-end md:hidden">
+          <div tabindex="0" role="button" class="btn btn-primary m-1">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <button class="btn btn-outline btn-primary w-full">
+                <i class="fa-solid fa-circle-question"></i> FAQ
+              </button>
+            </li>
+            <li>
+              <button class="btn btn-outline btn-primary w-full">
+                <i class="fa-solid fa-book-open"></i> Learn
+              </button>
+            </li>
+            <li>
+              <button class="btn btn-outline btn-primary w-full">
+                <i class="fa-solid fa-right-from-bracket"></i> Logout
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section class="hero-section">
+        <div class="left-hero"></div>
+        <div class="right-hero"></div>
+      </section>
+    </header>
+
+    <script
+      src="https://kit.fontawesome.com/5dd2f1e910.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
