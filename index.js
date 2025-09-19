@@ -36,14 +36,22 @@ const displayLevelWord = (level)=>{
     level.forEach(word => {
         const wordCard = document.createElement('div');
         wordCard.innerHTML = `
-         <div id="card-container" class="bg-white text-center py-3 px-2">
+         <div id="card-container" class="bg-white text-center py-3 px-0">
         <h2>${word.word}</h2>
         <p>${word.meaning}</p>
         <p>${word.pronunciation}</p>
 
-        <div>
-          <div></div>
-          <div></div>
+
+        <div class= "flex justify-between px-2">
+         <button class="btn">
+<i class="fa-solid fa-circle-info"></i>
+         </button>
+          
+         <button class="btn">
+         <i class="fa-solid fa-volume-high"></i>
+
+         </button>
+
         </div>
       </div>
         
