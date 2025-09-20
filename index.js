@@ -33,6 +33,20 @@ const displayLevelWord = (level)=>{
     const levelContainer = document.getElementById('word-container')
     levelContainer.innerHTML = "";
 
+    if(level.length === 0){
+        // alert("wor word detected");
+        levelContainer.innerHTML = `
+        <div class="text-center bg-gray-100 col-span-full ">
+        <img class="mx-auto" src ="./assets/alert-error.png" />
+        <p class="text-xl font-medium text-gray-400">
+          এখনো কোন Lesson add kora hoyni!
+        </p>
+        <h2 class="font-bold text-4xl">Lesson er jonno wait korun।</h2>
+      </div>
+        `;
+        return;
+    }
+
     level.forEach(word => {
         const wordCard = document.createElement('div');
         wordCard.innerHTML = `
@@ -42,7 +56,7 @@ const displayLevelWord = (level)=>{
         <p>${word.pronunciation}</p>
 
 
-        <div class= "flex justify-between px-2">
+        <div class= "flex justify-between">
          <button class="btn">
 <i class="fa-solid fa-circle-info"></i>
          </button>
@@ -103,4 +117,4 @@ const displayLesson = (lessons)=>{
 
 loadLessons()
 // loadLessons()
-loadLevelWord();
+// loadLevelWord();
