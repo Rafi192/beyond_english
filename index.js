@@ -33,7 +33,60 @@ const loadLevelWord =(id)=>{
 
 }
 
+const loadModalData =  async(id)=>{
+    const url = `https://openapi.programming-hero.com/api/word/${id}`
+    const response = await fetch(url);
+    const data = await response.json()
+    // console.log(data)
+    showModal(data.data)
+    
+}
+// "data": {
+//     "word": "Eager",
+//     "meaning": "আগ্রহী",
+//     "pronunciation": "ইগার",
+//     "level": 1,
+//     "sentence": "The kids were eager to open their gifts.",
+//     "points": 1,
+//     "partsOfSpeech": "adjective",
+//     "synonyms": [
+//       "enthusiastic",
+//       "excited",
+//       "keen"
 
+const showModal = (data)=>{
+    // console.log(data)
+    const modalDiv = document.getElementById("modal_container")
+    modalDiv.innerHTML = `
+    <div class="">
+            <h2 class="text-2xl font-bold">
+              ${data.word} <i class="fa-solid fa-microphone"></i> :${data.pronunciation}
+            </h2>
+          </div>
+          <div class="">
+            <h2 class="font-bold">Meaning</h2>
+            <p>${data.meaning}</p>
+          </div>
+
+          <div class="">
+            <h2 class="font-bold">Example</h2>
+            <p>${data.sentence}</p>
+          </div>
+
+          <div class="">
+            <h2>Synonyms</h2>
+            <span class="btn">${data.synonyms[0]} </span>
+            <span class="btn">${data.synonyms[1]}</span>
+            <span class="btn">${data.synonyms[2]}</span>
+          </div>
+        </div>
+    
+    
+    `
+    document.getElementById("my_modal_5").showModal()
+
+
+}
 
 const displayLevelWord = (level)=>{
     // get the container
@@ -64,7 +117,7 @@ const displayLevelWord = (level)=>{
 
 
         <div class= "flex justify-between">
-         <button class="btn">
+         <button onclick="loadModalData(${word.id})" class="btn">
 <i class="fa-solid fa-circle-info"></i>
          </button>
           
