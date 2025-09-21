@@ -22,3 +22,8 @@
 .bg-custotm {
   background-color: aliceblue;
 }
+
+.active {
+  background-color: #422ad5;
+  color: white;
+}
